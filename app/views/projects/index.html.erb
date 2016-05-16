@@ -2,13 +2,11 @@
   <div class="row">
     <div class="col s12">
       <div class="card-panel">
-        <h4 class="center"> My Projects</h4>
+        <h4 class="center proj-title"> My Projects</h4>
         <hr class="z-depth-1" />
           <div class="row">
             <% @projects.each do |p| %>
-
-            <div class="col s4">
-
+              <div class="col s4">
                 <div class="card hoverable">
                   <div class="card-image waves-effect waves-block waves-light">
                     <%= image_tag( p.image.url , class: 'activator') %>
@@ -17,20 +15,17 @@
                     <span class="card-title activator grey-text text-darken-4">
                       <%= p.title %>
                       <p>
-                        <a
-                          class=
-                            "waves-effect waves-light btn modal-trigger read-more"
-                          href=
-                            "#modal<%= p.id %>">Read More
+                      <a
+                        class=
+                          "waves-effect waves-light btn modal-trigger read-more"
+                        href=
+                          "#modal<%= p.id %>">Read More
                         </a>
                       </p>
-
                   </div>
                 </div>
-
-            </div>
+              </div>
             <% end %>
-
           </div>
       </div>
     </div>
@@ -52,7 +47,8 @@
 
       <!-- Close the modal -->
       <a href="#!"
-         class="modal-action modal-close waves-effect waves-green btn right">Close
+         class="modal-action modal-close waves-effect waves-green btn right">
+         Close
       </a>
 
       <!-- Link to heroku -->

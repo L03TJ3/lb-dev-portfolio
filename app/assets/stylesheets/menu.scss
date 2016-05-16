@@ -22,25 +22,28 @@
   padding: 15px;
   border-radius: 50px;
   width: 125px;
-  border: 3px solid white;
+
+  /* Border not visible but hover effect works nicer */
+  border: 3px solid #FFFFCC;
+
+  /* Speed of hover effect */
   transition: all 0.5s ease
 }
 
 .menu-bar ul li:hover {
   background: black;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   border: 3px solid #efc185;
   -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
 	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
+/* Change text-color of links */
 .menu-bar ul li a:hover {
   color: white;
 }
 
+/* Dividing line under the menu bar */
 hr {
   width: 75%;
   margin-top: -10px;
