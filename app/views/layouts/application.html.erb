@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LbDevPortfolio</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>LB-Development</title>
+  <%= stylesheet_link_tag    'application', media: 'all',
+                             'data-turbolinks-track' => true %>
+  <link href='https://fonts.googleapis.com/css?family=Dancing+Script' \
+        rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Special+Elite'
+        rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= render 'shared/header' %>
+<%= render 'shared/menu' %>
 
 <%= yield %>
 
+<%= render 'shared/footer' %>
 </body>
 </html>
