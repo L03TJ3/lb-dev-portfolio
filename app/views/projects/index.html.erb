@@ -1,1 +1,65 @@
-<h3 class="center">My Projects</h1>
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div class="card-panel">
+        <h4 class="center"> My Projects</h4>
+        <hr class="z-depth-1" />
+          <div class="row">
+            <% @projects.each do |p| %>
+
+            <div class="col s4">
+
+                <div class="card hoverable">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <%= image_tag( p.image.url , class: 'activator') %>
+                  </div>
+                  <div class="card-content project center">
+                    <span class="card-title activator grey-text text-darken-4">
+                      <%= p.title %>
+                      <p>
+                        <a
+                          class=
+                            "waves-effect waves-light btn modal-trigger read-more"
+                          href=
+                            "#modal<%= p.id %>">Read More
+                        </a>
+                      </p>
+
+                  </div>
+                </div>
+
+            </div>
+            <% end %>
+
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% @projects.each do |p| %>
+  <div id="modal<%= p.id %>" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4 class="center"><%= p.title %></h4>
+      <p class="center"><%= image_tag( p.image.url, class: 'modal-image') %></p>
+      <p class="text-flow"><%= p.description %></p>
+    </div>
+    <div class="modal-footer proj-mod-footer">
+      <!-- Link to github  -->
+      <a href="<%= p.github %>" class="waves-effect waves-light btn left">
+        Github (source)
+      </a>
+
+      <!-- Close the modal -->
+      <a href="#!"
+         class="modal-action modal-close waves-effect waves-green btn right">Close
+      </a>
+
+      <!-- Link to heroku -->
+      <a href="<%= p.heroku %>"
+         class="waves-effect waves-light btn" style="margin-right: 10%;">
+        Heroku(Live)(Work in Progress)
+      </a>
+    </div>
+  </div>
+<% end %>

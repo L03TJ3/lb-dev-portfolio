@@ -1,3 +1,17 @@
-// Place all the styles related to the Projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.read-more {
+  font-size: 1.2rem;
+}
+
+/* the footer in the projects modals */
+.proj-mod-footer {
+  border-top: 1px solid black;
+}
+
+.modal-image {
+  width: 65%;
+  height: auto;
+}
+
+.middle {
+  margin-right: 10%;
+}
