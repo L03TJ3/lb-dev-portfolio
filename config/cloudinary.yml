@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dfblssbuc
+  api_key: '782819775463587'
+  api_secret: sNz2klRoL4fF-u6Koi0DYWdDKMc
+  enhance_image_tag: true
+  static_image_support: true
+production:
+  cloud_name: dfblssbuc
+  api_key: '782819775463587'
+  api_secret: sNz2klRoL4fF-u6Koi0DYWdDKMc
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dfblssbuc
+  api_key: '782819775463587'
+  api_secret: sNz2klRoL4fF-u6Koi0DYWdDKMc
+  enhance_image_tag: true
+  static_image_support: false
