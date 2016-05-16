@@ -1,13 +1,13 @@
-
-
 <div class="container">
   <div class="row">
     <div class="col s12">
       <div class="card-panel">
-
-        <%= link_to "Add new project", projects_new_path,
-            class: 'waves-effect waves-light btn modal-trigger right' %>
-
+        <% if user_signed_in? %>
+          <% if current_user.id === 1 %>
+            <%= link_to "Add new project", projects_new_path,
+                class: 'waves-effect waves-light btn modal-trigger right' %>
+          <% end %>
+        <% end %>
         <h4 class="center proj-title"> My Projects</h4>
         <hr class="z-depth-1" />
           <div class="row">
