@@ -1,0 +1,20 @@
+footer.page-footer {
+  background: black;
+}
+
+.copy-border {
+  border-top: 1px solid white;
+}
+
+.contact-form {
+  color: white;
+}
+
+.send {
+  background: black;
+  border: 1px solid white;
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
