@@ -43,7 +43,12 @@
     <div class="modal-content">
       <h4 class="center"><%= p.title %></h4>
       <p class="center"><%= image_tag( p.image.url, class: 'modal-image') %></p>
-      <p class="text-flow"><%= p.description %></p>
+      <p class="proj-content"><%=  p.description %></p>
+      <div class="chip tags z-depth-2">Ruby</div>
+      <div class="chip tags z-depth-2">Rails</div>
+      <div class="chip tags z-depth-2">Postgresql</div>
+      <div class="chip tags z-depth-2">Devise</div>
+      <div class="chip tags z-depth-2">Bootstrap</div>
     </div>
     <div class="modal-footer proj-mod-footer">
       <!-- Link to github  -->
