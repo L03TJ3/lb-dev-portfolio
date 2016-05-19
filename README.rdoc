@@ -1,28 +1,37 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the source code for V1 of my portfolio website. Its build
+as an Rails application. This way its easier for me to maintain uploaded
+projects and edit them if necessary (edit not implemented yet)
 
-Things you may want to cover:
+What I used:
 
-* Ruby version
+* Rails framework
 
-* System dependencies
+* Materialize framework
 
-* Configuration
+* Jquery
 
-* Database creation
+* Devise
 
-* Database initialization
+* Postgresql
 
-* How to run the test suite
+* Carrierwave & Cloudinary
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Local hosted icons font
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Languages:
+
+ * Ruby
+
+ * CSS3 & SCSS
+
+ * Javascript
+
+ * HTML5
+
+In the open issues section here on github you can see what is still not working
+or what I am working on to improve my website.
+
+Live version: https://lb-development.herokuapp.com
