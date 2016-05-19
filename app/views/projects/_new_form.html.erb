@@ -1,0 +1,43 @@
+<h2 class="center">Add new projects</h2>
+<%= form_for(@project, type: :file) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@project.errors.count, "error") %>
+            prohibited this artist from being saved
+      </h2>
+      <ul>
+        <% @project.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field input-field">
+    <%= f.label :title %><br  />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field input-field">
+    <%= f.label :description %><br  />
+    <%= f.text_area :description, class: 'materialize-textarea' %>
+  </div>
+  <div class="field input-field">
+    <%= f.label :image %><br  />
+    <%= f.file_field :image, class: 'btn waves-effect waves-light' %>
+  </div>
+  <div class="row">
+    <div class="field input-field col s6">
+      <%= f.label :github %><br  />
+      <%= f.text_field :github %>
+    </div>
+    <div class="field input-field col s6">
+      <%= f.label :heroku %><br  />
+      <%= f.text_field :heroku %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Add project", class: "btn waves-effect waves-light send right-auth" %>
+    </div>
+  </div>
+
+
+<% end %>

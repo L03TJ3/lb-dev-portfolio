@@ -1,0 +1,35 @@
+<div class="container-for-modal">
+  <% @projects.each do |p| %>
+    <div id="modal<%= p.id %>" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4 class="center"><%= p.title %></h4>
+        <p class="center"><%= image_tag( p.image.url, class: 'modal-image') %></p>
+        <p class="proj-content"><%=  p.description %></p>
+        <div class="chip tags z-depth-2">Ruby</div>
+        <div class="chip tags z-depth-2">Rails</div>
+        <div class="chip tags z-depth-2">Postgresql</div>
+        <div class="chip tags z-depth-2">Devise</div>
+        <div class="chip tags z-depth-2">Bootstrap</div>
+      </div>
+      <div class="modal-footer proj-mod-footer">
+        <!-- Link to github  -->
+        <a href="<%= p.github %>" class="waves-effect waves-light btn left">
+          Github (source)
+        </a>
+
+        <!-- Close the modal -->
+        <a href="#"
+           class="modal-action modal-close waves-effect waves-green btn right">
+           Close
+        </a>
+
+        <!-- Link to heroku -->
+        <a href="<%= p.heroku %>"
+           class="waves-effect waves-light btn" style="margin-right: 10%;">
+          Heroku(Live)(Work in Progress)
+        </a>
+      </div>
+    </div>
+  <% end %>
+
+</div>
