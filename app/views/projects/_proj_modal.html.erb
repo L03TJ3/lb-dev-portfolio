@@ -2,8 +2,16 @@
   <% @projects.each do |p| %>
     <div id="modal<%= p.id %>" class="modal modal-fixed-footer">
       <div class="modal-content">
-        <h4 class="center"><%= p.title %></h4>
-        <p class="center"><%= image_tag( p.image.url, class: 'modal-image') %></p>
+        <h4 class="center"><%= p.title %>
+          <% if user_signed_in? %>
+            <% if are_you_admin? %>
+              <%= link_to "Edit", projects_edit_path(p),
+                  class: "button right" %>
+            <% end %>
+          <% end %>
+        </h4>
+        <p class="center"><%= image_tag(p.image.url, class: 'modal-image') %>
+        </p>
         <p class="proj-content"><%=  p.description %></p>
         <div class="chip tags z-depth-2">Ruby</div>
         <div class="chip tags z-depth-2">Rails</div>
@@ -31,5 +39,4 @@
       </div>
     </div>
   <% end %>
-
 </div>
