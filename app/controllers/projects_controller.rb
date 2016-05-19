@@ -1,7 +1,8 @@
 class ProjectsController < ApplicationController
 
-  before_action :authenticate_user!, only: [:new, :create]
-  before_action :who_is_admin?, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+  before_action :signed_in_admin?, only: [:new, :create, :edit, :update]
+  helper_method :are_you_admin?
 
   def index
     @projects = Project.all
@@ -19,16 +20,30 @@ class ProjectsController < ApplicationController
         format.html {redirect_to projects_path,
                      notice: 'Project was successfully added'}
       else
-        format.html { render :new}
+        format.html {render :new}
       end
     end
   end
 
+  def edit
+    @project = Project.find(params[:id])
+  end
+
+  def update
+    @project = Project.find(params[:id])
+
+    if @project.update_attributes(project_params)
+      redirect_to projects_path
+    else
+      render 'edit'
+    end
+  end
 
   protected
 
-    def who_is_admin?
-      if current_user.id === 1
+    # Redirects to root when accessing pages when not signed in as admin
+    def signed_in_admin?
+      if current_user.email == "laurenceweening@gmail.com" && "test@example.com"
         return
       else
         message = "Sorry you are not allowed to go there!"
@@ -37,7 +52,15 @@ class ProjectsController < ApplicationController
       end
     end
 
+    # Checks if users is admin to show or hide admin functionalities
+    def are_you_admin?
+      if current_user.email == "laurenceweening@gmail.com" && "test@example.com"
+        return true
+      end
+    end
+
     def project_params
-      params.require(:project).permit(:title, :description, :image, :github, :heroku)
+      params.require(:project).permit(:title, :description, :image, :github,
+                                      :heroku)
     end
 end
