@@ -8,58 +8,11 @@
                                               Other questions?
                                               Send me email below!</p>
         <div class="row">
-          <form id="contact-me" class="col s12 contact-form">
-            <div class="row">
-              <div class="input-field col s6">
-                <i class="material-icons md-light prefix">account_circle</i>
-                <input id="icon_prefix" type="text"
-                       class="validate">
-                <label for="icon_prefix">First Name</label>
-              </div>
-              <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Last Name</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons md-light prefix">contact_mail</i>
-                <input id="icon_prefix1" type="email" class="validate">
-                <label for="icon_prefix1">Email</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons md-light prefix">mode_edit</i>
-                <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                <label for="icon_prefix2">Message</label>
-              </div>
-            </div>
-            <button class="btn waves-effect waves-light right send" type=""
-            name="">Submit
-              <i class="material-icons right">send</i>
-            </button>
-          </form>
+          <%= render 'shared/contact_form' %>
         </div>
       </div>
       <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Find me on:</h5>
-        <div class="social__item">
-          <a
-            target="_blank"
-            href="https://nl.linkedin.com/in/laurence-weening-02937352"
-            class="social__icon--linkedin">
-          <i class="icon--linkedin"></i>
-        </a>
-        </div>
-        <div class="social__item">
-          <a
-            target="_blank"
-            href="http://github.com/L03TJ3"
-            class="social__icon--github">
-            <i class="icon--github"></i>
-          </a>
-        </div>
+        <%= render 'shared/social_icons' %>
       </div>
     </div>
   </div>
