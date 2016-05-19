@@ -3,8 +3,8 @@
   font-family: 'entypo';
   font-style: normal;
   font-weight: normal;
-  src: url('entypo.eot') format('eot');
-  src: url('entypo_iefix.eot') format('eot'),
-       url('entypo.woff') format('woff'),
-       url('entypo.ttf') format('truetype');
+  src: font-url('entypo.eot') format('eot');
+  src: font-url('entypo_iefix.eot') format('eot'),
+       font-url('entypo.woff') format('woff'),
+       font-url('entypo.ttf') format('truetype');
 }
