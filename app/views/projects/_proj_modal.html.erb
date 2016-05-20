@@ -13,11 +13,9 @@
         <p class="center"><%= image_tag(p.image.url, class: 'modal-image') %>
         </p>
         <p class="proj-content"><%=  p.description %></p>
-        <div class="chip tags z-depth-2">Ruby</div>
-        <div class="chip tags z-depth-2">Rails</div>
-        <div class="chip tags z-depth-2">Postgresql</div>
-        <div class="chip tags z-depth-2">Devise</div>
-        <div class="chip tags z-depth-2">Bootstrap</div>
+        <% p.tags.each do |tag| %>
+          <div class="chip tags z-depth-2"><%= tag.name %></div>
+        <% end %>
       </div>
       <div class="modal-footer proj-mod-footer">
         <!-- Link to github  -->

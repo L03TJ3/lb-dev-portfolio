@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516184151) do
+ActiveRecord::Schema.define(version: 20160520140738) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,22 @@ ActiveRecord::Schema.define(version: 20160516184151) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "heroku"
+  end
+
+  create_table "projects_tags", force: :cascade do |t|
+    t.integer  "tag_id"
+    t.integer  "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "projects_tags", ["project_id"], name: "index_projects_tags_on_project_id", using: :btree
+  add_index "projects_tags", ["tag_id"], name: "index_projects_tags_on_tag_id", using: :btree
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -44,4 +60,6 @@ ActiveRecord::Schema.define(version: 20160516184151) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "projects_tags", "projects"
+  add_foreign_key "projects_tags", "tags"
 end

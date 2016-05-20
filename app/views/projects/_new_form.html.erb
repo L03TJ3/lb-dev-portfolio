@@ -33,6 +33,16 @@
       <%= f.label :heroku %><br  />
       <%= f.text_field :heroku %>
     </div>
+  </div>
+  <div class="row">
+    <div class="field input-field">
+      <div>
+        <%= f.label :tags, class: "label-tags" %>
+        <br />
+        <% tags = Tag.all.map{ |t| [t.name, t.id]}.sort %>
+        <%= f.select :tag_ids, tags, { class: "select-tags", prompt: true}, {multiple: true, size: 10 } %>
+      </div>
+    </div>
     <div class="actions">
       <%= f.submit "Add Project", class: "btn waves-effect waves-light send
                                           right-auth" %>
