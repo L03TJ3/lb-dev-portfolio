@@ -13,3 +13,22 @@ Project.create(
   github: "https://github.com/L03TJ3/treehouses",
   heroku: "https://guarded-basin-47812.herokuapp.com"
 )
+
+tags = [
+  "Ruby",
+  "PostgreSQL",
+  "Rails",
+  "ReactJS",
+  "Devise",
+  "Materialize",
+  "jQuery",
+  "Javascript",
+  "CSS",
+  "SCSS",
+  "Mobile",
+  "AJAX"
+]
+
+tags.each do |tag_name|
+  tags = Tag.create( name: tag_name)
+end
