@@ -1,10 +1,11 @@
+// Menu bar container
 .menu-bar {
   position:relative;
   width: 100%;
   height: 20%;
   margin-top: 2%;
 }
-
+// Align the ul items horizontally
 .menu-bar ul {
   position: relative;
   margin-top: 0;
@@ -12,7 +13,7 @@
   list-style-type: none;
   text-align: center;
 }
-
+// List items
 .menu-bar ul li {
   cursor: pointer;
   position: relative;
@@ -20,19 +21,16 @@
   margin-left: 35px;
   margin-right: 35px;
   padding: 15px;
-  border-radius: 50px;
+  border-radius: 10px;
   width: 125px;
-
-  /* Border not visible but hover effect works nicer */
   border: 3px solid #DADADA;
-
   /* Speed of hover effect */
   transition: all 0.5s ease
 }
 
+// Hover effect for the list items
 .menu-bar ul li:hover {
   background: black;
-  border: 3px solid #efc185;
   -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
 	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
