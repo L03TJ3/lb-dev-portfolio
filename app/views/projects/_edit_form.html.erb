@@ -38,7 +38,8 @@
         <%= f.label :tags, class: "label-tags" %>
         <br />
         <% tags = Tag.all.map{ |t| [t.name, t.id]}.sort %>
-        <%= f.select :tag_ids, tags, { class: "select-tags", prompt: true}, {multiple: true, size: 10 } %>
+        <%= f.select :tag_ids, tags, { class: "select-tags", prompt: true},
+                                      {multiple: true, size: 10 } %>
       </div>
     </div>
     <div class="actions">
